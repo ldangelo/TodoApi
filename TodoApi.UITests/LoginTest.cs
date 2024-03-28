@@ -13,7 +13,7 @@ public class LoginTest: IDisposable
     {
         var chromeOptions = new ChromeOptions();
 
-        chromeOptions.PageLoadStrategy = PageLoadStrategy.Eager;
+        chromeOptions.PageLoadStrategy = PageLoadStrategy.Default;
         _driver = new ChromeDriver(chromeOptions);
     }
 
@@ -40,6 +40,7 @@ public class LoginTest: IDisposable
         _driver.Navigate()
             .GoToUrl(_urlUnderTesting);
 
+        Thread.Sleep(1500);
         //
         // Intput username and password and submit
         _driver.FindElement(By.Id("username"))

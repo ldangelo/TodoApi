@@ -24,4 +24,9 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Todo.Web\Server\Todo.Web.Server.csproj" />
+      <ProjectReference Include="..\TodoApi\TodoApi.csproj" />
+    </ItemGroup>
+
 </Project>
